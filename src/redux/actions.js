@@ -1,4 +1,4 @@
-// Action 변수는 대문자로 만든다.
+// Action의 type 은 대문자로 만든다.
 const ADD_TODO = 'ADD_TODO';
 
 
@@ -6,6 +6,6 @@ const ADD_TODO = 'ADD_TODO';
 function addTodo(todo) { 
   return {
     type: ADD_TODO,
-    todo: todo, // 혹은 todo 만 적어도 된다.
+    todo: todo, // key 와 value가 같으면 value값만 적어도 된다.
   };
-}
+} 
