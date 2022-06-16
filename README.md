@@ -44,7 +44,7 @@
 ```
 + 액션을 받아서 state를 리턴하는 구조
 + 인자로 들어오는 previousState 와 리턴되는 newState 는 다른 참조를 가지도록 해야한다.
- 
+
 
 ### 특징
 + 액션을 주면, 그 액션이 적용되어 달라진(그대로인)결과를 만들어 준다.
@@ -53,3 +53,13 @@
   + 불변(Immutable)
     + why??
       + 리듀서를 통해 state가 달라졌음을 리덕스가 인지하는 방식.
+
+## Store
+> 액션과 리듀서가 함께하는 곳.
+
++ application state 를 가지고 있다.
++ `getState()`를 통해 접근한다.
++ `dispatch(atcion), dispatch(action creator)`로 업데이트
++ `subscribe(listener)`함수로 리스너들을 등록 가능하다.
++ 위 함수 `subscribe()`에 의해 반환된 함수는 리스너들의 등록 해제를 다룬다.
+  + index.js 에서 확인 가능.
