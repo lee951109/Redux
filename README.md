@@ -54,6 +54,18 @@
     + why??
       + 리듀서를 통해 state가 달라졌음을 리덕스가 인지하는 방식.
 
+### combineReducers
+> 규모가 작을 땐, reducers.js 파일 하나로 커버가 가능 하지만, 점점 앱이 커지고 복잡해 질 수록 관리하기가 힘들어진다.
+이때, combineReducers 를 사용해 reducer를 각 기능별로 세분화하고 유지보수를 더 쉽게 할 수 있다.
+
+```javascript
+// reducer 를 combineReducers 를 사용해 세분화 함.
+const reducer = combineReducers({
+  todos, 
+  filter 
+});
+```
+
 ## Store
 > 액션과 리듀서가 함께하는 곳.
 
